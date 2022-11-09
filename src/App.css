@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+
+.navbar {
+  background-color: #1d3557;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.counter{
+  position: relative;
+}
+.counter span{
+  position: absolute;
+  right: -7px;
+  top: -2px;
+  background-color: #1d3557;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-size: .7rem;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px  #6b7178;
+}
+
+.cartItemsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  margin: 20px auto;
+}
+
+.cartItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 100%;
+  gap: 20px;
+}
+
+.cartitem{
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px  #457b9d;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.itemimage{
+  width: 100px;
+}
+.itemimage img{
+  width: 100%;
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.details h6{
+  margin: 0;
+}
+.details button{
+  width: fit-content;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+}
+
+.actions{
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  gap: 15px;
+}
+
+hr{
+  width: 100%;
+}
+
+.totals{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-weight: 1.2rem;
+}
+.clearcart{
+  margin: 20px;
+}
+.btn{
+  background-color: orangered;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+}
