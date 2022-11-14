@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import {useDispatch } from 'react-redux';
 import { useSelector} from 'react-redux'
 
-import {  calculateTotals } from './redux/features/cart'
+import {  calculateTotals, getAllcartItems } from './redux/features/cart'
  
 function App() {
   const dispatch = useDispatch()
@@ -13,6 +13,12 @@ function App() {
   useEffect(() => {
     dispatch(calculateTotals())
   }, [cartItems])
+  
+  useEffect(() => {
+    dispatch(getAllcartItems({id:"1", name:"smith",age:10}))
+  }, [])
+
+  
   
   return (
     <div className="App">

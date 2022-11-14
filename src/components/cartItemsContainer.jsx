@@ -6,17 +6,30 @@ import { clearcart } from '../redux/features/cart';
 
 const CartItemsContainer = () => {
       const dispatch = useDispatch()
-      const {cartItems, total} = useSelector(state=>state)
+      const {cartItems, total, quantity, isLoading, error} = useSelector(state=>state)
       
+      if (isLoading) {
+            return (<div>
+              <h2>Loading...</h2>
+            </div>)
+          }
+
+          if (!isLoading && error.trim()) {
+            return (<div>
+              <h2>{error}</h2>
+            </div>)
+          }
   return (
     <div className='cartItemsContainer'>
       <h2>Your Cart</h2>
+      {!quantity &&  <h4>your cart is empty</h4>
+      }
       <div className="cartItems">
             {cartItems.map(cartItem=><CartItem key={cartItem.id} {...cartItem}/>)}
       </div>
-      <div className="clearcart">
+      { quantity?  <div className="clearcart">
             <button className='btn' onClick={()=>dispatch(clearcart())}>clear cart</button>
-      </div>
+      </div> : ""}
       <hr />
       
       <div className="totals">
